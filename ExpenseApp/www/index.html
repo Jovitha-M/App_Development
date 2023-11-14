@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, width=device-width, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Hello World</title>
+  </head>
+  <body>
+    <h1 class="heading">Expense Manager</h1>
+    <form action="#" name="expense_form">
+      <label for="days">Choose the day:</label>
+      <select name="days" id="days">
+        <option value="sun">Sunday</option>
+        <option value="mon">Monday</option>
+        <option value="tue">Tuesday</option>
+        <option value="wed">Wednesday</option>
+        <option value="thu">Thursday</option>
+        <option value="fri">Friday</option>
+        <option value="sat">Saturday</option>
+      </select>
+      <br />
+      Expense: <input type="number" name="expense" /> <br />
+      Income: <input type="number" name="income" /> <br />
+      <label for="cat">Choose the Category:</label>
+      <select name="cat" id="cat">
+        <option value="food">Food</option>
+        <option value="hou">Housing</option>
+        <option value="extra">Extra</option>
+      </select>
+      <br />
+      <input type="submit" value="Add" id="submit" />
+    </form>
+
+    <h2>Weekly Summary</h2>
+    <div id="weekly-summary">
+      <!-- Weekly summary goes here -->
+    </div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
