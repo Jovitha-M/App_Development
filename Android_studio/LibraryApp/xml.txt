@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:app="http://schemas.android.com/apk/res-auto"
+   xmlns:tools="http://schemas.android.com/tools"
+   android:layout_width="match_parent"
+   android:layout_height="match_parent"
+   tools:context=".MainActivity">
+
+   <TextView
+       android:id="@+id/label1"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="52dp"
+       android:text="Student Name"
+       app:layout_constraintEnd_toStartOf="@+id/name"
+       app:layout_constraintHorizontal_bias="0.456"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <TextView
+       android:id="@+id/label2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="64dp"
+       android:layout_marginEnd="68dp"
+       android:text="Reg No"
+       app:layout_constraintEnd_toStartOf="@+id/regno"
+       app:layout_constraintHorizontal_bias="1.0"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/label1" />
+
+   <TextView
+       android:id="@+id/label3"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="52dp"
+       android:layout_marginTop="72dp"
+       android:text="Book Id"
+       app:layout_constraintEnd_toStartOf="@+id/bookid"
+       app:layout_constraintHorizontal_bias="0.157"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/label2" />
+
+   <EditText
+       android:id="@+id/name"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="40dp"
+       android:layout_marginEnd="32dp"
+       android:ems="10"
+       android:inputType="textPersonName"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <EditText
+       android:id="@+id/regno"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="44dp"
+       android:layout_marginEnd="24dp"
+       android:ems="10"
+       android:inputType="textPersonName"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/name" />
+
+   <Button
+       android:id="@+id/borrow"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="64dp"
+       android:onClick="handleBorrow"
+       android:text="Borrow"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.444"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/bookid" />
+
+   <TextView
+       android:id="@+id/label4"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="52dp"
+       android:layout_marginTop="156dp"
+       android:text="Reg No"
+       app:layout_constraintEnd_toStartOf="@+id/rregno"
+       app:layout_constraintHorizontal_bias="0.187"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/label3" />
+
+   <EditText
+       android:id="@+id/rregno"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="24dp"
+       android:layout_marginEnd="40dp"
+       android:ems="10"
+       android:inputType="textPersonName"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/borrow" />
+
+   <TextView
+       android:id="@+id/label5"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="52dp"
+       android:layout_marginTop="52dp"
+       android:text="Book Id"
+       app:layout_constraintEnd_toStartOf="@+id/rbookid"
+       app:layout_constraintHorizontal_bias="0.19"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/label4" />
+
+   <EditText
+       android:id="@+id/rbookid"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="20dp"
+       android:layout_marginEnd="40dp"
+       android:ems="10"
+       android:inputType="textPersonName"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/rregno" />
+
+   <Button
+       android:id="@+id/returns"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="44dp"
+       android:text="Return"
+       android:onClick="handleReturn"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.437"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/rbookid"
+       app:layout_constraintVertical_bias="0.0" />
+
+   <Spinner
+       android:id="@+id/bookid"
+       android:layout_width="208dp"
+       android:layout_height="33dp"
+       android:layout_marginTop="48dp"
+       android:layout_marginEnd="28dp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/regno" />
+</androidx.constraintlayout.widget.ConstraintLayout>

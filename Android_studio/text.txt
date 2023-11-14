@@ -1,0 +1,14 @@
+i) Change Text:
+textview.setText("Hello User");
+
+ii)Change Text color:
+textview.setTextColor(RED);
+
+iii)Change Text font:
+textview.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD_ITALIC))
+(or)
+Typeface type = Typeface.createFromAsset(getAssets(), "fonts/arial.ttf");
+textView.setTypeface(type);
+
+iv)Change Font size:
+textView.setTextSize(20);

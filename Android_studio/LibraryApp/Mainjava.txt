@@ -1,0 +1,55 @@
+package com.example.libraryapp;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+
+public class MainActivity extends AppCompatActivity {
+
+   DB db;
+   EditText bname;
+   EditText bregno;
+   Spinner bbookid;
+   EditText rregno;
+   EditText rbookid;
+
+   String s1,s2,s3;
+
+
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+       super.onCreate(savedInstanceState);
+       setContentView(R.layout.activity_main);
+       db = new DB(MainActivity.this);
+       bname = findViewById(R.id.name);
+       bregno = findViewById(R.id.regno);
+       bbookid = findViewById(R.id.bookid);
+       rregno = findViewById(R.id.rregno);
+       rbookid = findViewById(R.id.rbookid);
+
+       ArrayList<String> array = db.fetchBooks();
+
+       ArrayAdapter<CharSequence> adapter = new ArrayAdapter (this, android.R.layout.simple_spinner_item, array);
+       adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+       bbookid.setAdapter(adapter);
+   }
+
+   public void handleBorrow(View v) {
+       s1 = bname.getText().toString();
+       s2 = bregno.getText().toString();
+       s3 = bbookid.getSelectedItem().toString();
+       Toast.makeText(this,db.borrow(s1,s2,s3),Toast.LENGTH_LONG).show();
+   }
+
+   public void handleReturn(View v) {
+       String s1 = db.returns(rregno.getText().toString(),rbookid.getText().toString());
+       Toast.makeText(this,s1,Toast.LENGTH_LONG).show();
+   }
+}
